@@ -31,12 +31,22 @@ label {
   margin-bottom: 5px;
 }
 
-input[type="number"] {
+input[type="number"], input[type="range"] {
   width: calc(100% - 20px);
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+input[type="range"] {
+  width: calc(100% - 22px);
+}
+
+#rate-value {
+  display: block;
+  text-align: center;
+  margin-top: 5px;
 }
 
 button {
@@ -48,6 +58,7 @@ button {
   color: white;
   font-size: 16px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 button:hover {
@@ -76,19 +87,4 @@ th, td {
 
 th {
   background-color: #f2f2f2;
-}
-
-.reiniciarCaja {
-  margin-top: 20px;
-  text-align: center;
-  cursor: pointer;
-}
-
-.reiniciar {
-  color: #007bff;
-  text-decoration: underline;
-}
-
-.reiniciar:hover {
-  color: #0056b3;
 }

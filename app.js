@@ -26,11 +26,17 @@ document.getElementById('loan-form').addEventListener('submit', function(e) {
   document.getElementById('results').style.display = 'block';
 });
 
-document.querySelector('.reiniciarCaja').addEventListener('click', function() {
+document.getElementById('reset-button').addEventListener('click', function() {
   document.getElementById('loan-form').reset();
   document.getElementById('results').style.display = 'none';
   document.getElementById('monthly-payment').innerText = '';
   document.querySelector('#payment-schedule tbody').innerHTML = '';
+  document.getElementById('rate-value').innerText = '5%';
+});
+
+document.getElementById('rate').addEventListener('input', function() {
+  const rateValue = document.getElementById('rate').value;
+  document.getElementById('rate-value').innerText = `${rateValue}%`;
 });
 
 function calcularPagoMensualConstante(capital_inicial, meses, interes_mensual) {
